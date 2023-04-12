@@ -10,8 +10,6 @@ const main = (arr) => {
   const onlyStrings = getOnlyType(arr, 'string');
   const highestNumber = greaterThan(onlyNumbers);
 
-  console.log(onlyNumbers, onlyStrings, highestNumber);
-
   return [onlyNumbers, onlyStrings, highestNumber];
 };
 

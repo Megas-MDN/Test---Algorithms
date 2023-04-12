@@ -6,7 +6,7 @@ const getRamdomChar = (bigStr) =>
 const getNRandom = (num, str = '') =>
   num <= 0 ? str : getNRandom(num - 1, str + getRamdomChar(bigString));
 
-const getNstringsNTimes = (n, num, arr = []) => {
+const getNstringsNTimes = (n = 4, num = 4, arr = []) => {
   arr.push(getNRandom(n));
   if (num <= 1) return arr.join('-');
   return getNstringsNTimes(n, num - 1, arr);

@@ -1,8 +1,7 @@
-const flatAll = (array) =>
-  array.reduce((ar, element) => {
+const flatAll = (arr) =>
+  arr.flat().reduce((ar, element) => {
     if (Array.isArray(element)) {
-      ar.push(flatAll(element.flat()));
-      return ar;
+      return flatAll([...ar, ...element]);
     }
     if (typeof element !== 'number') return ar;
     ar.push(element);
