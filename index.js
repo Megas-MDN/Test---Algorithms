@@ -10,10 +10,11 @@ try {
   console.log('Tests oneDimensionalArray');
 
   const inputMixArray = ['a', 10, 'b', 'hola', 122, 15];
-  const [arrNumber, arrString, highNumber] = oneDimensionalArray(inputMixArray);
-  assert.deepEqual(['a', 'b', 'hola'], arrString);
-  assert.deepEqual([10, 122, 15], arrNumber);
-  assert.equal(122, highNumber);
+  const { arrNumber, arrString, highNumber } = oneDimensionalArray();
+
+  assert.deepEqual(['a', 'b', 'hola'], arrString(inputMixArray));
+  assert.deepEqual([10, 122, 15], arrNumber(inputMixArray));
+  assert.equal(122, highNumber(inputMixArray));
 
   // hashMap
   console.log('Tests hashMap');
@@ -47,7 +48,7 @@ try {
   // generateId
   console.log('Tests generateId');
 
-  const id = generateId();
+  const id = generateId(undefined);
   const id2 = generateId(2, 5);
   const id3 = generateId(5, 2);
 

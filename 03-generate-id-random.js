@@ -1,4 +1,5 @@
-const bigString = 'abcdefghijklmnopqrstuvwxyz0123456789';
+const bigString =
+  'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const getRamdomChar = (bigStr) =>
   bigStr[Math.floor(Math.random() * bigStr.length)];
@@ -6,11 +7,14 @@ const getRamdomChar = (bigStr) =>
 const getNRandom = (num, str = '') =>
   num <= 0 ? str : getNRandom(num - 1, str + getRamdomChar(bigString));
 
-const getNstringsNTimes = (n = 4, num = 4, arr = []) => {
-  arr.push(getNRandom(n));
-  if (num <= 1) return arr.join('-');
-  return getNstringsNTimes(n, num - 1, arr);
+const getNstringsNTimes = (nChars, numStrings, arr) => {
+  arr.push(getNRandom(nChars)); // xy12
+  if (numStrings <= 1) return arr.join('-'); // xyz0-123z-...-str6
+  return getNstringsNTimes(nChars, numStrings - 1, arr);
 };
 
+const generateId = (nChars = 4, numStrings = 4) =>
+  getNstringsNTimes(nChars, numStrings, []);
+
 // console.log(getNstringsNTimes(2, 5)); // z1-yq-jy-5v-r5
-module.exports = getNstringsNTimes;
+module.exports = generateId;

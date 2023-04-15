@@ -2,15 +2,12 @@ const getOnlyType = (arr, type) => arr.filter((el) => typeof el === type);
 
 const greaterThan = (arr) => [...arr].sort((a, b) => b - a)[0];
 
-const main = (arr) => {
-  if (!Array.isArray(arr))
-    throw new Error('Sorry, only array type is allowed!');
+const main = () => {
+  const arrNumber = (arr) => getOnlyType(arr, 'number');
+  const arrString = (arr) => getOnlyType(arr, 'string');
+  const highNumber = (arr) => greaterThan(arrNumber(arr));
 
-  const onlyNumbers = getOnlyType(arr, 'number');
-  const onlyStrings = getOnlyType(arr, 'string');
-  const highestNumber = greaterThan(onlyNumbers);
-
-  return [onlyNumbers, onlyStrings, highestNumber];
+  return { arrNumber, arrString, highNumber };
 };
 
 module.exports = main;
