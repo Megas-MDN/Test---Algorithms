@@ -37,6 +37,10 @@ ex: generateId(undefined, 3): 1234-xyzk-01jL.
 
 The index.js file calls each function to run unit tests. Tests are written using Node.js's assert library and verify that the output of each function is correct for different inputs. To run the tests, simply execute the index.js file using Node.js in the terminal:
 
+```bash
+node index.js
+```
+
 <hr>
 
 ## 🛠️ Install project
