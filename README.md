@@ -26,10 +26,10 @@ hashMap[``operation`` ](operands \_): Returns the result of the specified operat
 
 The third problem involves generating a random ID pattern with alphanumeric characters. The solution to this problem can be found in the 03-generate-id-random.js file, which contains the following function:
 
-generateId(): Returns a string with the random ID pattern XXXX-AAAA-BBBB-CCCC, where XXXX, AAAA, BBBB, and CCCC are random alphanumeric characters.
+`generateId()`: Returns a string with the random ID pattern XXXX-AAAA-BBBB-CCCC, where XXXX, AAAA, BBBB, and CCCC are random alphanumeric characters.
 `Ex: 3zsd-7tbt-84az-l53v`
 
-The generateId(option1: number | undefined, option2: number | undefined) function also accepts 2 optional parameters, the first one says how many characters per set of strings will be generated (default: nChar = 4, numStrngs = 4), ex: generateId(2) : xy-k3-Y0- 3w
+The `generateId(option1: number | undefined, option2: number | undefined)`: function also accepts 2 optional parameters, the first one says how many characters per set of strings will be generated (default: nChar = 4, numStrngs = 4), ex: generateId(2) : xy-k3-Y0- 3w
 The second parameter determines how many sets of strings will be generated,
 ex: generateId(undefined, 3): 1234-xyzk-01jL.
 
