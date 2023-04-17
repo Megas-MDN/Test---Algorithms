@@ -48,7 +48,7 @@ try {
   // generateId
   console.log('Tests generateId');
 
-  const id = generateId(undefined);
+  const id = generateId();
   const id2 = generateId(2, 5);
   const id3 = generateId(5, 2);
 
